@@ -1,18 +1,16 @@
-import neuralnetwork.NeuralNode;
-import neuralnetwork.TrainingSet;
+import neuralnetwork.ANN;
+import neuralnetwork.Client;
+import neuralnetwork.Neuron;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Program {
+
     public static void main(String[] args){
-        TrainingSet[] trainingSet = {
-                new TrainingSet(new double[]{0,0f, 0,0f} , 0.0f),
-                new TrainingSet(new double[]{1,0f, 0,0f} , 0.0f),
-                new TrainingSet(new double[]{0,0f, 1,0f} , 0.0f),
-                new TrainingSet(new double[]{1,0f, 1,0f} , 1.0f)
-        };
-
-        NeuralNode node = new NeuralNode(trainingSet);
-        node.Train(10);
-
-
+        Client client = new Client();
+        client.Go();
     }
+
+
 }
